@@ -17,7 +17,11 @@ public class HomeController : Controller
     {
         return View();
     }
-
+    [HttpPost] 
+  public IActionResult Solicitud()
+    {
+        return View();
+    }
     public IActionResult Privacy()
     {
         return View();
