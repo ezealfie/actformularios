@@ -6,15 +6,56 @@
     <h1 class="display-4">Bienvenido</h1>
     <h3>Solicitud de prestamo </h3>
 
-<form action='@Url.Action("Solicitud", "Home")' method="POST">
-    <h4>Datos personales</h4>
-<h6>Ingrese su nombre:</h6><input type="text" name="nombre" required>
-<h6>Ingrese su edad:</h6><input type="number" name="edad" required>
-<h6>Ingrese su DNI:</h6><input type="number" name="dni" required>
-<h4>Situacion laboral</h4>
-<h6>Ingrese su edad:</h6><input type="number" name="edad" required>
-<h6>¿Actualmente trabaja?</h6> 
-<p>Si</p> <input type="radio" name="trabaja" value="Si" required> 
-<p>No</p> <input type="radio" name="trabaja" value="No"required> 
-</form>
+    <form action='@Url.Action("Solicitud", "Home")' method="POST">
+        <div>
+            <h4>Datos personales</h4>
+            <h6>Ingrese su nombre:</h6><input type="text" name="nombre" required>
+            <h6>Ingrese su edad:</h6><input type="number" name="edad" required>
+            <h6>Ingrese su DNI:</h6><input type="number" name="dni" required>
+        </div>
+        <div>
+            <h4>Situacion laboral</h4>
+            <h6>¿Actualmente trabaja?</h6>
+            <input type="radio" name="trabaja" value="1" required><label for="trabaja">Si</label>
+            <input type="radio" name="trabaja" value="2" required> <label for="trabaja">No</label>
+            <h6>Seleccione su tipo de empleo</h6>
+            <select name="tipoempleo" required>
+                <option value="1">Relación de dependencia</option>
+                <option value="2">Monotributista</option>
+                <option value="3">Autonomo</option>
+                <option value="4">Desempleado</option>
+            </select>
+        </div>
+        <div>
+            <h4>Información económica</h4>
+            <h6>Ingrese su ingreso mensual:</h6><input type="number" name="ingreso" required>
+            <h6>¿Posee otras deudas?</h6>
+            <input type="radio" name="deudas" value="1" required> <label for="deudas">Si</label>
+            <input type="radio" name="deudas" value="2" required> <label for="deudas">No</label>
+            <h6>En caso afirmativo seleccione cuales:</h6>
+            <input type="checkbox" name="credito"> <label for="credito">Tarjeta de crédito</label> <br>
+            <input type="checkbox" name="bancario"> <label for="bancario">Prestamo bancario</label> <br>
+            <input type="checkbox" name="informal"> <label for="informal">Prestamo informal</label>
+        </div>
+        <div>
+            <h4>Condiciones del prestamo</h4>
+            <h6>Monto solicitado:</h6> <input type="number" name="monto" required>
+            <h6>Plazo de devolución:</h6>
+            <select name="plazo" required>
+                <option value="6">6 meses</option>
+                <option value="12">12 meses</option>
+                <option value="24">24 meses</option>
+            </select>
+            <br>
+        </div>
+        <div>
+            <h4>Terminos y Condiciones</h4>
+            <input type="checkbox" name="terminos"> <label for="terminos">¿Acepta los Terminos y Condiciones?</label>
+        </div>
+        <div>
+            <h4>Confirmación</h4>
+            <input type="submit" value="Enviar solicitud">
+            <input type="reset" value="Eliminar solicitud">
+        </div>
+    </form>
 </div>
