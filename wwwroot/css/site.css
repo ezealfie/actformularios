@@ -30,4 +30,15 @@ body {
   text-align: start;
 }
 form div{
-  padding-bottom:5%;}
+  float: left;
+  padding-bottom:5%;
+  margin-bottom: 10%;
+border: 2px solid black;
+border-radius: 15px;
+box-shadow: 4px 4px 15px black;
+width: 30%;
+height: 300px;
+padding-top: 3%
+}
+
+
